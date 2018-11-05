@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import watch from 'gulp-watch';
+import concat from 'gulp-concat';
 import scss from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import del from 'del';
@@ -32,6 +33,7 @@ const path = {
     html: `${dirs.src}/*.html`,
     scss: `${dirs.src}/scss/style.scss`,
     js: `${dirs.src}/js/app.js`,
+    jsVendors: `${dirs.src}/js/vendor/*.js`,
     img: `${dirs.src}/images/**/*.*`,
     fonts: `${dirs.src}/fonts/**/*.*` 
   },
@@ -83,16 +85,6 @@ gulp.task('scss:build', () => {
     .pipe(reload({ stream: true }));
 });
 
-gulp.task('js:build', () => {
-  gulp.src(path.src.js)
-    .pipe(plumber())
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(gulp.dest(path.build.js))
-    .pipe(reload({ stream: true }));
-});
-
 gulp.task('js:bundle', () =>
     browserify({
       entries: [path.src.js],
@@ -107,6 +99,13 @@ gulp.task('js:bundle', () =>
     .pipe(reload({ stream: true }))
   );
 
+gulp.task('js:vendors', () =>
+    gulp.src(path.src.jsVendors)
+        .pipe(concat('vendors.js'))
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({ stream: true }))
+);
+
 gulp.task('webserver', () => browserSync(config) );
 
 gulp.task('build', (cb) => {
@@ -116,7 +115,8 @@ gulp.task('build', (cb) => {
       'images:build',
       'fonts:build',
       'scss:build',
-      'js:bundle'
+      'js:bundle',
+      'js:vendors'
     ],
     cb
   );

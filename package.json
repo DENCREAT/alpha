@@ -31,7 +31,10 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-watch": "^5.0.1",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
     "run-sequence": "^2.2.1",
+    "slick-carousel": "^1.8.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
@@ -39,6 +42,7 @@
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "gulp-concat": "^2.6.1"
   }
 }
