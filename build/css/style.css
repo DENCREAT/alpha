@@ -124,15 +124,98 @@ button:focus {
   outline: none; }
 
 .container {
+  margin: 0 auto;
   max-width: 1740px; }
+
+.t-upper {
+  text-transform: uppercase; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .ico {
   display: inline-block;
   vertical-align: middle;
   background: url("../images/ico/") no-repeat center center; }
+  .ico-location {
+    width: 39px;
+    height: 39px;
+    background-image: url("../images/ico/location.png"); }
+    .ico-location--active {
+      background-image: url("../images/ico/location--active.png"); }
   .ico-message {
     width: 22px;
     height: 22px;
     background-image: url("../images/ico/message.png"); }
     .ico-message--active {
       background-image: url("../images/ico/message--active.png"); }
+  .ico-fb {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico/fb.png"); }
+    .ico-fb--active {
+      background-image: url("../images/ico/fb--active.png"); }
+  .ico-vk {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico/vk.png"); }
+    .ico-vk--active {
+      background-image: url("../images/ico/vk--active.png"); }
+  .ico-instagram {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico/instagram.png"); }
+    .ico-instagram--active {
+      background-image: url("../images/ico/instagram--active.png"); }
+
+.footer {
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .footer a {
+    text-decoration: none;
+    color: inherit; }
+    .footer a.flex {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .footer__ico {
+    margin-right: 10px; }
+  .footer__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 28px 0 20px 0;
+    font-family: "Arsenal Bold";
+    color: #7c90a5; }
+  .footer__main-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .footer__main-item_limit {
+      max-width: 210px; }
+    .footer__main-item_align-bottom {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+  .footer__main-item + .footer__main-item {
+    margin-left: 25px; }
+  .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 18px 0 29px 0;
+    border-top: solid 2px #aabbca;
+    color: #838d96; }
+  .footer__social-ico + .footer__social-ico {
+    margin-left: 10px; }

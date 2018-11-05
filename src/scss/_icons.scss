@@ -3,12 +3,9 @@
 	vertical-align: middle;
 	background: url($icons) no-repeat center center;
 
-	&-message {
-		@include size(22px);
-		background-image: url($icons + 'message.png');
-
-		&--active {
-			background-image: url($icons + 'message--active.png');
-		}
-	}
+	@include ico(location, 39px);
+	@include ico(message, 22px);
+	@include ico(fb, 30px);
+	@include ico(vk, 30px);
+	@include ico(instagram, 30px);
 }

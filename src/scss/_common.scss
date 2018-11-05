@@ -31,5 +31,14 @@ button {
 }
 
 .container {
+	margin: 0 auto;
 	max-width: $size_main_container;
+}
+
+.t-upper {
+	text-transform: uppercase;
+}
+
+.flex {
+	display: flex;
 }
