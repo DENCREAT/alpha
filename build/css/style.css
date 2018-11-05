@@ -124,20 +124,203 @@ select:focus,
 button:focus {
   outline: none; }
 
+.client-slider__item-img, .last-projects__item, .last-projects__img, .last-projects__item-title, .last-projects__item-description, .last-projects__item-square {
+  -webkit-transition: all .26s ease-in-out;
+  transition: all .26s ease-in-out; }
+
 .container {
+  margin: 0 auto;
   max-width: 1440px;
   margin: 0 auto; }
+
+.t-upper {
+  text-transform: uppercase; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.section {
+  margin: 25px 0; }
+
+.last-projects__item {
+  -webkit-box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
 
 .ico {
   display: inline-block;
   vertical-align: middle;
   background: url("../images/ico/") no-repeat center center; }
+  .ico-location {
+    width: 39px;
+    height: 39px;
+    background-image: url("../images/ico/location.png"); }
+    .ico-location--active {
+      background-image: url("../images/ico/location--active.png"); }
   .ico-message {
     width: 22px;
     height: 22px;
     background-image: url("../images/ico/message.png"); }
     .ico-message--active {
       background-image: url("../images/ico/message--active.png"); }
+  .ico-fb {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico/fb.png"); }
+    .ico-fb--active {
+      background-image: url("../images/ico/fb--active.png"); }
+  .ico-vk {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico/vk.png"); }
+    .ico-vk--active {
+      background-image: url("../images/ico/vk--active.png"); }
+  .ico-instagram {
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/ico/instagram.png"); }
+    .ico-instagram--active {
+      background-image: url("../images/ico/instagram--active.png"); }
+  .ico-arrow-left, .ico-arrow-right {
+    width: 12px;
+    height: 12px;
+    background-image: url("../images/ico/arrow-left.png"); }
+    .ico-arrow-left--active {
+      background-image: url("../images/ico/arrow-left--active.png"); }
+  .ico-arrow-right {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+.client-slider {
+  position: relative;
+  padding: 0 50px;
+  height: 166px;
+  background: #ffffff;
+  border: solid 1px #c6c6c6;
+  -webkit-box-shadow: 0 6px 0 0 #f0f0f0;
+  box-shadow: 0 6px 0 0 #f0f0f0; }
+  .client-slider__item.slick-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 30px; }
+  .client-slider__item-img {
+    display: none;
+    max-height: 80px;
+    opacity: .5;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+    .client-slider__item-img:hover {
+      opacity: 1;
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
+    .initialized .client-slider__item-img {
+      display: block; }
+  .client-slider__control {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2; }
+    .client-slider__control:hover {
+      background: #f09039; }
+    .client-slider__control_prev {
+      left: 15px;
+      top: 15px; }
+    .client-slider__control_next {
+      right: 15px;
+      top: 15px; }
+  .client-slider__list, .client-slider__item, .client-slider__item-img,
+  .client-slider .slick-list,
+  .client-slider .slick-track {
+    height: 100%; }
+
+.last-projects__title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-left: 250px;
+  margin-bottom: 50px;
+  font-family: "Arsenal Bold";
+  color: #535d67; }
+
+.last-projects__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.last-projects__item {
+  width: calc(100% / 4 - 28px * 3 / 4);
+  background: #f1f1f1;
+  cursor: pointer; }
+  .last-projects__item + .last-projects__item {
+    margin-left: 28px; }
+  .last-projects__item:hover {
+    background: #f09039; }
+    .last-projects__item:hover * {
+      color: #ffffff; }
+
+.last-projects__img-container {
+  position: relative;
+  height: 295px;
+  overflow: hidden; }
+
+.last-projects__img {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%; }
+  .last-projects__item:hover .last-projects__img {
+    -webkit-transform: scale(1.015);
+    transform: scale(1.015); }
+
+.last-projects__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 30px 70px 20px 70px;
+  height: 185px;
+  text-align: center; }
+
+.last-projects__item-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: "Arsenal Bold";
+  color: #3e4851; }
+  .last-projects__item:hover .last-projects__item-title {
+    text-decoration: underline; }
+
+.last-projects__item-description {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #5d6a75; }
+
+.last-projects__item-square {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #b7b7b7; }
 
 .header {
   font-family: "Arsenal Bold";
@@ -214,3 +397,53 @@ button:focus {
     color: #fff;
     border-radius: 5px;
     cursor: pointer; }
+
+.footer {
+  font-size: 14px;
+  font-size: 1.4rem; }
+  .footer a {
+    text-decoration: none;
+    color: inherit; }
+    .footer a.flex {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .footer__ico {
+    margin-right: 10px; }
+  .footer__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 28px 0 20px 0;
+    font-family: "Arsenal Bold";
+    color: #7c90a5; }
+  .footer__main-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .footer__main-item_limit {
+      max-width: 210px; }
+    .footer__main-item_align-bottom {
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+  .footer__main-item + .footer__main-item {
+    margin-left: 25px; }
+  .footer__copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 18px 0 29px 0;
+    border-top: solid 2px #aabbca;
+    color: #838d96; }
+  .footer__social-ico + .footer__social-ico {
+    margin-left: 10px; }
