@@ -1,0 +1,203 @@
+@mixin size($width: 30px, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin rem($value) {
+  font-size: $value;
+  font-size: to-rem($value);
+}
+
+@mixin width-calc-stretch($count, $offset, $fallback) {
+  display: inline-block;
+  $count-offset: $count - 1;
+  width: $fallback;
+  width: calc(100% / #{$count} - #{$offset} * #{$count-offset} / #{$count});
+  margin-right: $offset;
+  &:last-child { margin-right: 0; }
+  &:nth-child(#{$count}n) { margin-right: 0; }
+}
+
+@mixin grid-square($count-in-row: 2, $offset: 10px) {
+    position: relative;
+    padding-top: calc(100% / #{$count-in-row} - #{$offset} / #{$count-in-row} * #{$count-in-row - 1});
+    width: calc(100% / #{$count-in-row} - #{$offset} / #{$count-in-row} * #{$count-in-row - 1});
+    overflow: hidden;
+    &:not(:nth-child(#{$count-in-row}n)) { margin-right: $offset; }
+    &:not(:nth-child(-n+#{$count-in-row})) { margin-top: $offset; }
+}
+
+@mixin flexible-angle($pseudo, $flip: false, $angle: 1.5deg, $pos: relative, $zIndex: 1) {
+  // Possible values for $pseudo are: before, after, both
+  @if $pseudo == 'before' or $pseudo == 'after' or $pseudo == 'both' {
+    position: $pos;
+    z-index: $zIndex;
+    $selector: if($pseudo == 'both', '&:before,&:after', '&:#{$pseudo}');
+
+    #{$selector} {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; // for Chrome Windows
+    }
+
+    @if $pseudo == 'before' {
+      #{$selector} {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+    }
+
+    @if $pseudo == 'after' {
+      #{$selector} {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 100%;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+
+    @if $pseudo == 'both' {
+      &:before {
+        top: 0;
+
+        @if $flip {
+          transform: skewY($angle * -1);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle);
+          transform-origin: 100% 0;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+
+        @if $flip {
+          transform: skewY($angle);
+          transform-origin: 0 0;
+        } @else {
+          transform: skewY($angle * -1);
+          transform-origin: 100%;
+        }
+      }
+    }
+  }
+}
+
+@mixin angle($color) {
+  margin-left: 8px;
+  margin-right: 8px;
+  position: relative;
+  padding: 0 4px;
+  background: $color;
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+  &:before {
+    transform: translateX(calc(-100% - 4px));
+    border-right: solid 5px $color;
+    border-left: solid 5px transparent;
+    border-bottom: solid 17px $color;
+    border-top: solid 17px transparent;
+  }
+  &:after {
+    transform: translateX(4px);
+    border-left: solid 5px $color;
+    border-right: solid 5px transparent;
+    border-top: solid 17px $color;
+    border-bottom: solid 17px transparent;
+  }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+        @content;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin center-self {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin -last {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+/*--- MIXIN FOR FONTS ---*/
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+      eot: "?",
+      svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+      otf: "opentype",
+      ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+/*--- END MIXIN FOR FONTS ---*/

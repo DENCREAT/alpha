@@ -1,0 +1,29 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: $font-root-size;
+}
+
+body {
+	@include rem(16px);
+	padding: 0;
+	margin: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+html, body {
+	height: 100%;
+}
+
+input,
+select,
+button {
+	&:focus {
+		outline: none;
+	}
+}

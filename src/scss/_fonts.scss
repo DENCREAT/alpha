@@ -1,0 +1,34 @@
+$fontDir: '../fonts/';
+$f-light: 'light/';
+$f-lightitalic: 'lightitalic/';
+$f-regular: 'regular/';
+$f-semibold: 'semibold/';
+$f-medium: 'medium/';
+$f-mediumitalic: 'mediumitalic/';
+$f-bold: 'bold/';
+$f-bolditalic: 'bolditalic/';
+$f-ex-bold: 'extrabold/';
+$f-italic: 'italic/';
+
+/*--- UBUNTU ---*/
+$font-ubuntu-path: $fontDir + 'Ubuntu/';
+$fname-ubuntu: 'ubuntu';
+
+$font-ubuntu-light: 'Ubuntu Light';
+$font-ubuntu-light-italic: 'Ubuntu Light Italic';
+$font-ubuntu-regular: 'Ubuntu Regular';
+$font-ubuntu-italic: 'Ubuntu Italic';
+$font-ubuntu-medium: 'Ubuntu Medium';
+$font-ubuntu-medium-italic: 'Ubuntu Medium Italic';
+$font-ubuntu-bold: 'Ubuntu Bold';
+$font-ubuntu-bold-italic: 'Ubuntu Bold Italic';
+
+@include font-face($font-ubuntu-light, $font-ubuntu-path + $f-light + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-light-italic, $font-ubuntu-path + $f-lightitalic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-regular, $font-ubuntu-path + $f-regular + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-italic, $font-ubuntu-path + $f-italic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-medium, $font-ubuntu-path + $f-medium + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-medium-italic, $font-ubuntu-path + $f-mediumitalic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-bold, $font-ubuntu-path + $f-bold + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+@include font-face($font-ubuntu-bold-italic, $font-ubuntu-path + $f-bolditalic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
+/*--- UBUNTU ---*/
