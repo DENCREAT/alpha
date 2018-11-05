@@ -123,7 +123,7 @@ select:focus,
 button:focus {
   outline: none; }
 
-.client-slider__item-img {
+.client-slider__item-img, .last-projects__item, .last-projects__img, .last-projects__item-title, .last-projects__item-description, .last-projects__item-square {
   -webkit-transition: all .26s ease-in-out;
   transition: all .26s ease-in-out; }
 
@@ -141,6 +141,10 @@ button:focus {
 
 .section {
   margin: 25px 0; }
+
+.last-projects__item {
+  -webkit-box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
 
 .ico {
   display: inline-block;
@@ -244,6 +248,77 @@ button:focus {
   .client-slider .slick-list,
   .client-slider .slick-track {
     height: 100%; }
+
+.last-projects__title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding-left: 250px;
+  margin-bottom: 50px;
+  font-family: "Arsenal Bold";
+  color: #535d67; }
+
+.last-projects__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.last-projects__item {
+  width: calc(100% / 4 - 28px * 3 / 4);
+  background: #f1f1f1;
+  cursor: pointer; }
+  .last-projects__item + .last-projects__item {
+    margin-left: 28px; }
+  .last-projects__item:hover {
+    background: #f09039; }
+    .last-projects__item:hover * {
+      color: #ffffff; }
+
+.last-projects__img-container {
+  position: relative;
+  height: 295px;
+  overflow: hidden; }
+
+.last-projects__img {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%; }
+  .last-projects__item:hover .last-projects__img {
+    -webkit-transform: scale(1.015);
+    transform: scale(1.015); }
+
+.last-projects__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 30px 70px 20px 70px;
+  height: 185px;
+  text-align: center; }
+
+.last-projects__item-title {
+  font-size: 18px;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-family: "Arsenal Bold";
+  color: #3e4851; }
+  .last-projects__item:hover .last-projects__item-title {
+    text-decoration: underline; }
+
+.last-projects__item-description {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #5d6a75; }
+
+.last-projects__item-square {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #b7b7b7; }
 
 .footer {
   font-size: 14px;
