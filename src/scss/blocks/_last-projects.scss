@@ -1,0 +1,79 @@
+.last-projects {
+  $selector: &;
+
+  &__title {
+    @include rem(18px);
+    padding-left: 250px;
+    margin-bottom: 50px;
+    font-family: $font-arsenal-bold;
+    color: #535d67;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @extend %anim-default, %shadow-level-2;
+    @include width-calc-stretch(4, 28px);
+    background: #f1f1f1;
+    cursor: pointer;
+
+    &:hover {
+      background: $primary_color;
+      * {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    height: 295px;
+    overflow: hidden;
+  }
+
+  &__img {
+    @extend %anim-default;
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+
+    #{$selector}__item:hover & {
+      transform: scale(1.015);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 70px 20px 70px;
+    height: 185px;
+    text-align: center;
+  }
+
+  &__item-title {
+    @extend %anim-default;
+    @include rem(18px);
+    margin-bottom: 20px;
+    font-family: $font-arsenal-bold;
+    color: #3e4851;
+
+    #{$selector}__item:hover & {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-description {
+    @extend %anim-default;
+    @include rem(16px);
+    color: #5d6a75;
+  }
+
+  &__item-square {
+    @extend %anim-default;
+    @include rem(14px);
+    color: #b7b7b7;
+  }
+}

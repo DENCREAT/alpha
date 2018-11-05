@@ -8,4 +8,10 @@
 	@include ico(fb, 30px);
 	@include ico(vk, 30px);
 	@include ico(instagram, 30px);
+	@include ico(arrow-left, 12px);
+
+	&-arrow-right {
+		@extend .ico-arrow-left;
+		transform: rotate(180deg);
+	}
 }
