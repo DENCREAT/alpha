@@ -109,6 +109,7 @@ html {
 body {
   font-size: 16px;
   font-size: 1.6rem;
+  min-width: 320px;
   padding: 0;
   margin: 0;
   -webkit-backface-visibility: hidden;
@@ -124,7 +125,8 @@ button:focus {
   outline: none; }
 
 .container {
-  max-width: 1740px; }
+  max-width: 1440px;
+  margin: 0 auto; }
 
 .ico {
   display: inline-block;
@@ -136,3 +138,79 @@ button:focus {
     background-image: url("../images/ico/message.png"); }
     .ico-message--active {
       background-image: url("../images/ico/message--active.png"); }
+
+.header {
+  font-family: "Arsenal Bold";
+  width: 100%;
+  background: #fff; }
+  .header__logo-link {
+    width: 300px;
+    height: 76px;
+    display: block;
+    background: url(../../images/logo.jpg) no-repeat; }
+    .header__logo-link:after {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      background: #f18d33;
+      width: 120px; }
+  .header__contact {
+    margin-left: auto; }
+    .header__contact-text {
+      font-size: 16px;
+      font-size: 1.6rem;
+      margin-left: 10px;
+      text-transform: uppercase;
+      color: #7c90a5;
+      cursor: pointer; }
+    .header__contact:before {
+      content: url(../../images/ico/message--active.png); }
+  .header__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 120px; }
+  .header__nav {
+    margin-left: auto; }
+    .header__nav-items {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none; }
+    .header__nav-item {
+      margin-left: 45px; }
+    .header__nav-link {
+      font-size: 16px;
+      font-size: 1.6rem;
+      color: #848484;
+      text-decoration: none;
+      text-transform: uppercase; }
+      .header__nav-link:hover {
+        color: #444444; }
+  .header__lang-switcher {
+    font-size: 16px;
+    font-size: 1.6rem;
+    width: 53px;
+    height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #f18d33;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer; }

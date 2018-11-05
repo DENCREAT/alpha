@@ -1,1 +1,94 @@
-.header {}
+.header {
+  font-family: $font-arsenal-bold;
+  $logoImagePath: '../../images/logo.jpg';
+  $contactImagePath: '../../images/ico/message--active.png';
+  $langSwitcherImagePath: '../../ico/';
+
+  width: 100%;
+
+  background: $main-white-color;
+
+  &__logo-link {
+    @include size(300px, 76px);
+
+    display: block;
+    background: url(#{$logoImagePath}) no-repeat;
+
+    &:after {
+      display: inline-block;
+      content: '';
+      height: 2px;
+      background: $main-orange-color;
+      width: 120px;
+    }
+  }
+
+  &__contact {
+    margin-left: auto;
+
+    &-text {
+      @include rem(16px);
+
+      margin-left: 10px;
+
+      text-transform: uppercase;
+      color: #7c90a5;
+      cursor: pointer;
+    }
+
+    &:before {
+      content: url(#{$contactImagePath});
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 120px;
+  }
+
+  &__nav {
+    margin-left: auto;
+
+    &-items {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
+    &-item {
+      margin-left: 45px;
+    }
+
+    &-link {
+      @include rem(16px);
+
+      color: $nav-color-static;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $nav-color-active;
+      }
+    }
+    }
+
+    &__lang-switcher {
+      @include rem(16px);
+      @include size(53px, 20px);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background-color: $main-orange-color;
+      color: $main-white-color;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+

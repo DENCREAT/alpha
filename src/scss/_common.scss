@@ -11,6 +11,8 @@ html {
 
 body {
 	@include rem(16px);
+
+    min-width: 320px;
 	padding: 0;
 	margin: 0;
 	-webkit-backface-visibility: hidden;
@@ -32,4 +34,5 @@ button {
 
 .container {
 	max-width: $size_main_container;
+    margin: 0 auto;
 }
