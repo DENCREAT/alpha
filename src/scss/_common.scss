@@ -32,6 +32,22 @@ button {
 	}
 }
 
+%anim-fast {
+	transition: all .13s ease-in-out;
+}
+
+%anim-default {
+	transition: all .26s ease-in-out;
+}
+
+%anim-medium {
+	transition: all .39s ease-in-out;
+}
+
+%anim-slow {
+	transition: all .52s ease-in-out;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: $size_main_container;
@@ -44,4 +60,8 @@ button {
 
 .flex {
 	display: flex;
+}
+
+.section {
+	margin: 25px 0;
 }

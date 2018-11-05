@@ -1,4 +1,5 @@
 import slick from 'slick-carousel'
+
 import { slidersSettings as settings } from '../settings/sliders.config';
 
 export default class Slider {
@@ -14,13 +15,6 @@ export default class Slider {
 
 	init() {
 		this.container.slick(settings.defaultOptions);
-	}
-
-	setActive($items, indx) {
-		$items
-			.removeClass(this.activeCls)
-			.eq(indx)
-			.addClass(this.activeCls);
 	}
 
 	getNavItems() {

@@ -1,0 +1,68 @@
+.client-slider {
+  position: relative;
+  padding: 0 50px;
+  height: 166px;
+  background: #ffffff;
+  border: solid 1px #c6c6c6;
+  box-shadow: 0 6px 0 0 #f0f0f0;
+
+  &__item.slick-slide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 30px;
+  }
+
+  &__item-img {
+    @extend %anim-default;
+
+    display: none;
+    max-height: 80px;
+    opacity: .5;
+    filter: grayscale(100%);
+
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+
+    .initialized & {
+      display: block;
+    }
+  }
+
+  &__control {
+    $pos: 15px;
+    @include size(21px);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dbdbdb;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover {
+      background: #f09039;
+    }
+
+    &_prev {
+      left: $pos;
+      top: $pos;
+    }
+
+    &_next {
+      right: $pos;
+      top: $pos;
+    }
+  }
+
+  &__list,
+  &__item,
+  &__item-img,
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+}
