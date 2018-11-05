@@ -10,6 +10,14 @@
                     @@include('./project-item.html')
                 }
             </div>
+
+
+            @@if (certificate !== false) {
+                <div class="projects__certificate">
+                    <img class="projects__certificate-img" src="images/content/certificate.png" alt="">
+                </div>
+            }
+
         </div>
     </div>
 </section>

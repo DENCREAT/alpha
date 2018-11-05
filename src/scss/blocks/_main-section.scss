@@ -1,5 +1,6 @@
 .main-section {
   position: relative;
+  min-height: 300px;
 
   &:before {
     content: '';
@@ -27,6 +28,7 @@
   .main-section__content {
     position: relative;
     padding: 40px 0;
+    height: 100%;
     z-index: 2;
     background: url($bg + 'main-section-gray.png') no-repeat;
     background-position: left bottom -30px;

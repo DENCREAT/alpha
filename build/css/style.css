@@ -193,7 +193,8 @@ button:focus {
     transform: rotate(180deg); }
 
 .main-section {
-  position: relative; }
+  position: relative;
+  min-height: 300px; }
   .main-section:before {
     content: '';
     position: absolute;
@@ -217,6 +218,7 @@ button:focus {
   .main-section .main-section__content {
     position: relative;
     padding: 40px 0;
+    height: 100%;
     z-index: 2;
     background: url("../images/bg/main-section-gray.png") no-repeat;
     background-position: left bottom -30px; }
@@ -354,6 +356,12 @@ button:focus {
   font-size: 14px;
   font-size: 1.4rem;
   color: #b7b7b7; }
+
+.projects__certificate {
+  cursor: pointer;
+  text-align: right;
+  height: 0;
+  opacity: .35; }
 
 .header {
   position: relative;

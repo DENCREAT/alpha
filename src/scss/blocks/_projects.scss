@@ -78,4 +78,11 @@
     @include rem(14px);
     color: #b7b7b7;
   }
+
+  &__certificate {
+    cursor: pointer;
+    text-align: right;
+    height: 0;
+    opacity: .35;
+  }
 }
