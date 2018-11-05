@@ -115,6 +115,8 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background: #ffffff; }
+  body.main {
+    background: url("../images/bg/main-page.png"); }
 
 html, body {
   height: 100%; }
@@ -227,10 +229,10 @@ button:focus {
   position: relative;
   padding: 0 50px;
   height: 166px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.65);
   border: solid 1px #c6c6c6;
-  -webkit-box-shadow: 0 6px 0 0 #f0f0f0;
-  box-shadow: 0 6px 0 0 #f0f0f0; }
+  -webkit-box-shadow: 0 6px 0 0 rgba(214, 214, 214, 0.4);
+  box-shadow: 0 6px 0 0 rgba(214, 214, 214, 0.4); }
   .client-slider__item.slick-slide {
     display: -webkit-box;
     display: -ms-flexbox;

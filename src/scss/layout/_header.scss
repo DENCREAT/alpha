@@ -80,13 +80,11 @@
 
   &__lang-switcher {
     @include rem(16px);
-    //@include size(53px, 20px);
 
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 6px 18px;
-
     background-color: $main-orange-color;
     color: $main-white-color;
     border-radius: 5px;

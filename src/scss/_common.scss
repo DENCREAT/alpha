@@ -18,6 +18,9 @@ body {
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	background: $main_bg;
+	&.main {
+		background: url($bg + 'main-page.png');
+	}
 }
 
 html, body {
