@@ -111,7 +111,8 @@ body {
   padding: 0;
   margin: 0;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  background: #ffffff; }
 
 html, body {
   height: 100%; }
@@ -121,6 +122,16 @@ select:focus,
 button:focus {
   outline: none; }
 
+.container {
+  max-width: 1740px; }
+
 .ico {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  background: url("../images/ico/") no-repeat center center; }
+  .ico-message {
+    width: 22px;
+    height: 22px;
+    background-image: url("../images/ico/message.png"); }
+    .ico-message--active {
+      background-image: url("../images/ico/message--active.png"); }

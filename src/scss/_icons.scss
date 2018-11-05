@@ -1,4 +1,14 @@
 .ico {
 	display: inline-block;
 	vertical-align: middle;
+	background: url($icons) no-repeat center center;
+
+	&-message {
+		@include size(22px);
+		background-image: url($icons + 'message.png');
+
+		&--active {
+			background-image: url($icons + 'message--active.png');
+		}
+	}
 }

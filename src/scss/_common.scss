@@ -14,6 +14,7 @@ body {
 	margin: 0;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	background: $main_bg;
 }
 
 html, body {
@@ -26,4 +27,8 @@ button {
 	&:focus {
 		outline: none;
 	}
+}
+
+.container {
+	max-width: $size_main_container;
 }
