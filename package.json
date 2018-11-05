@@ -27,6 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
+    "gulp-file-include": "^2.0.1",
     "gulp-plumber": "^1.2.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",

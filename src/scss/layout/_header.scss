@@ -1,44 +1,46 @@
 .header {
+  @extend %shadow-level-2;
+  position: relative;
   font-family: $font-arsenal-bold;
-  $logoImagePath: '../../images/logo.jpg';
-  $contactImagePath: '../../images/ico/message--active.png';
-  $langSwitcherImagePath: '../../ico/';
-
   width: 100%;
-
   background: $main-white-color;
+  z-index: 3;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__ico {
+    margin-right: 10px;
+  }
 
   &__logo-link {
     @include size(300px, 76px);
-
+    position: relative;
     display: block;
-    background: url(#{$logoImagePath}) no-repeat;
 
     &:after {
-      display: inline-block;
+      position: absolute;
+      left: 34%;
+      bottom: 1px;
       content: '';
-      height: 2px;
+      height: 3px;
       background: $main-orange-color;
-      width: 120px;
+      width: 521px;
+      border-bottom: 1px solid $main-orange-color;
     }
   }
 
   &__contact {
+    @include rem(16px);
     margin-left: auto;
+    color: #7c90a5;
+  }
 
-    &-text {
-      @include rem(16px);
-
-      margin-left: 10px;
-
-      text-transform: uppercase;
-      color: #7c90a5;
-      cursor: pointer;
-    }
-
-    &:before {
-      content: url(#{$contactImagePath});
-    }
+  &__contact-text {
+    display: flex;
+    align-items: center;
   }
 
   &__content {
@@ -50,45 +52,44 @@
 
   &__nav {
     margin-left: auto;
+  }
 
-    &-items {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+  &__nav-items {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 
-      list-style-type: none;
-    }
+  &__nav-item {
+    margin-left: 45px;
+  }
 
-    &-item {
-      margin-left: 45px;
-    }
+  &-link {
+    @include rem(16px);
 
-    &-link {
-      @include rem(16px);
+    color: $nav-color-static;
+    text-decoration: none;
+    text-transform: uppercase;
 
-      color: $nav-color-static;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &:hover {
-        color: $nav-color-active;
-      }
-    }
-    }
-
-    &__lang-switcher {
-      @include rem(16px);
-      @include size(53px, 20px);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background-color: $main-orange-color;
-      color: $main-white-color;
-      border-radius: 5px;
-      cursor: pointer;
+    &:hover {
+      color: $nav-color-active;
     }
   }
+
+  &__lang-switcher {
+    @include rem(16px);
+    @include size(53px, 20px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $main-orange-color;
+    color: $main-white-color;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
 

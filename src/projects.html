@@ -1,10 +1,15 @@
 @@include('./partials/start.html')
 @@include('./partials/header.html')
 
+<div class="main-section">
+    <div class="main-section__content">
 @@include('./partials/projects.html', {
-    "count": 4,
-    "title": true
+    "title": false,
+    "count": 8
 })
+    </div>
+</div>
+
 @@include('./partials/client-slider.html')
 
 @@include('./partials/footer.html')

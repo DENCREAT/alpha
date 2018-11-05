@@ -3,6 +3,7 @@ import watch from 'gulp-watch';
 import concat from 'gulp-concat';
 import scss from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
+import fileinclude from 'gulp-file-include';
 import del from 'del';
 import babel from 'gulp-babel';
 
@@ -59,6 +60,10 @@ gulp.task('clean', () => del([path.build.html, path.build.css]) );
 gulp.task('html:build', () => {
   gulp.src(path.src.html)
     .pipe(rigger())
+      .pipe(fileinclude({
+          prefix: '@@',
+          basepath: '@file'
+      }))
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({ stream: true }));
 });
