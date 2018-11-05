@@ -3,6 +3,17 @@
   height: $height;
 }
 
+@mixin ico($name, $size) {
+  &-#{$name} {
+    @include size($size);
+    background-image: url($icons + $name + '.png');
+
+    &--active {
+      background-image: url($icons + $name + '--active.png');
+    }
+  }
+}
+
 @mixin rem($value) {
   font-size: $value;
   font-size: to-rem($value);
