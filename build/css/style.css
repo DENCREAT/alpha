@@ -70,56 +70,32 @@
 
 /*--- MIXIN FOR FONTS ---*/
 /*--- END MIXIN FOR FONTS ---*/
-/*--- UBUNTU ---*/
+/*--- arsenal ---*/
 @font-face {
-  font-family: "Ubuntu Light";
+  font-family: "Arsenal Regular";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Ubuntu/light/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/light/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/light/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/light/ubuntu.svg#Ubuntu_Light") format("svg"); }
+  src: url("../fonts/arsenal/regular/arsenal.eot?") format("eot"), url("../fonts/arsenal/regular/arsenal.woff") format("woff"), url("../fonts/arsenal/regular/arsenal.woff2") format("woff2"), url("../fonts/arsenal/regular/arsenal.svg#Arsenal_Regular") format("svg"); }
 
 @font-face {
-  font-family: "Ubuntu Light Italic";
+  font-family: "Arsenal Italic";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Ubuntu/lightitalic/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/lightitalic/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/lightitalic/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/lightitalic/ubuntu.svg#Ubuntu_Light_Italic") format("svg"); }
+  src: url("../fonts/arsenal/italic/arsenal.eot?") format("eot"), url("../fonts/arsenal/italic/arsenal.woff") format("woff"), url("../fonts/arsenal/italic/arsenal.woff2") format("woff2"), url("../fonts/arsenal/italic/arsenal.svg#Arsenal_Italic") format("svg"); }
 
 @font-face {
-  font-family: "Ubuntu Regular";
+  font-family: "Arsenal Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Ubuntu/regular/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/regular/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/regular/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/regular/ubuntu.svg#Ubuntu_Regular") format("svg"); }
+  src: url("../fonts/arsenal/bold/arsenal.eot?") format("eot"), url("../fonts/arsenal/bold/arsenal.woff") format("woff"), url("../fonts/arsenal/bold/arsenal.woff2") format("woff2"), url("../fonts/arsenal/bold/arsenal.svg#Arsenal_Bold") format("svg"); }
 
 @font-face {
-  font-family: "Ubuntu Italic";
+  font-family: "Arsenal Bold Italic";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Ubuntu/italic/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/italic/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/italic/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/italic/ubuntu.svg#Ubuntu_Italic") format("svg"); }
+  src: url("../fonts/arsenal/bolditalic/arsenal.eot?") format("eot"), url("../fonts/arsenal/bolditalic/arsenal.woff") format("woff"), url("../fonts/arsenal/bolditalic/arsenal.woff2") format("woff2"), url("../fonts/arsenal/bolditalic/arsenal.svg#Arsenal_Bold_Italic") format("svg"); }
 
-@font-face {
-  font-family: "Ubuntu Medium";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Ubuntu/medium/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/medium/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/medium/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/medium/ubuntu.svg#Ubuntu_Medium") format("svg"); }
-
-@font-face {
-  font-family: "Ubuntu Medium Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Ubuntu/mediumitalic/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/mediumitalic/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/mediumitalic/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/mediumitalic/ubuntu.svg#Ubuntu_Medium_Italic") format("svg"); }
-
-@font-face {
-  font-family: "Ubuntu Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Ubuntu/bold/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/bold/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/bold/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/bold/ubuntu.svg#Ubuntu_Bold") format("svg"); }
-
-@font-face {
-  font-family: "Ubuntu Bold Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Ubuntu/bolditalic/ubuntu.eot?") format("eot"), url("../fonts/Ubuntu/bolditalic/ubuntu.woff") format("woff"), url("../fonts/Ubuntu/bolditalic/ubuntu.woff2") format("woff2"), url("../fonts/Ubuntu/bolditalic/ubuntu.svg#Ubuntu_Bold_Italic") format("svg"); }
-
-/*--- UBUNTU ---*/
+/*--- arsenal ---*/
 *,
 *:after,
 *:before {

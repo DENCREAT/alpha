@@ -10,25 +10,17 @@ $f-bolditalic: 'bolditalic/';
 $f-ex-bold: 'extrabold/';
 $f-italic: 'italic/';
 
-/*--- UBUNTU ---*/
-$font-ubuntu-path: $fontDir + 'Ubuntu/';
-$fname-ubuntu: 'ubuntu';
+/*--- arsenal ---*/
+$font-arsenal-path: $fontDir + 'arsenal/';
+$fname-arsenal: 'arsenal';
 
-$font-ubuntu-light: 'Ubuntu Light';
-$font-ubuntu-light-italic: 'Ubuntu Light Italic';
-$font-ubuntu-regular: 'Ubuntu Regular';
-$font-ubuntu-italic: 'Ubuntu Italic';
-$font-ubuntu-medium: 'Ubuntu Medium';
-$font-ubuntu-medium-italic: 'Ubuntu Medium Italic';
-$font-ubuntu-bold: 'Ubuntu Bold';
-$font-ubuntu-bold-italic: 'Ubuntu Bold Italic';
+$font-arsenal-regular: 'Arsenal Regular';
+$font-arsenal-italic: 'Arsenal Italic';
+$font-arsenal-bold: 'Arsenal Bold';
+$font-arsenal-bold-italic: 'Arsenal Bold Italic';
 
-@include font-face($font-ubuntu-light, $font-ubuntu-path + $f-light + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-light-italic, $font-ubuntu-path + $f-lightitalic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-regular, $font-ubuntu-path + $f-regular + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-italic, $font-ubuntu-path + $f-italic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-medium, $font-ubuntu-path + $f-medium + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-medium-italic, $font-ubuntu-path + $f-mediumitalic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-bold, $font-ubuntu-path + $f-bold + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-@include font-face($font-ubuntu-bold-italic, $font-ubuntu-path + $f-bolditalic + $fname-ubuntu, normal, normal, eot  woff woff2 svg);
-/*--- UBUNTU ---*/
+@include font-face($font-arsenal-regular, $font-arsenal-path + $f-regular + $fname-arsenal, normal, normal, eot woff woff2 svg);
+@include font-face($font-arsenal-italic, $font-arsenal-path + $f-italic + $fname-arsenal, normal, normal, eot woff woff2 svg);
+@include font-face($font-arsenal-bold, $font-arsenal-path + $f-bold + $fname-arsenal, normal, normal, eot woff woff2 svg);
+@include font-face($font-arsenal-bold-italic, $font-arsenal-path + $f-bolditalic + $fname-arsenal, normal, normal, eot woff woff2 svg);
+/*--- arsenal ---*/
