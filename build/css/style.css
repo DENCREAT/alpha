@@ -154,6 +154,7 @@ button:focus {
 
 .column_left {
   width: 45%;
+  padding-left: 100px;
   padding-right: 120px; }
 
 .column_right {
@@ -293,9 +294,8 @@ button:focus {
   .top-main__description {
     font-size: 16px;
     font-size: 1.6rem;
-    font-family: "Arsenal Bold"; }
-    .main .top-main__description {
-      margin-bottom: 130px; }
+    font-family: "Arsenal Bold";
+    margin-bottom: 130px; }
   .top-main__control {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -728,6 +728,20 @@ button:focus {
   width: 100%;
   background: #fff;
   z-index: 3; }
+  .header__column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header__column.column_left {
+      position: relative;
+      padding: 0; }
+    .header__column.column_right {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
   .header a {
     text-decoration: none;
     color: #848484; }
@@ -738,11 +752,10 @@ button:focus {
   .header__logo-link {
     width: 300px;
     height: 76px;
-    position: relative;
     display: block; }
     .header__logo-link:after {
       position: absolute;
-      left: 34%;
+      right: 0;
       bottom: 1px;
       content: '';
       height: 3px;
@@ -768,9 +781,14 @@ button:focus {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 0 auto;
     min-height: 120px; }
   .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     margin-left: auto; }
   .header__nav-items {
     display: -webkit-box;

@@ -22,9 +22,7 @@
   &__description {
     @include rem(16px);
     font-family: $font-arsenal-bold;
-    .main & {
-      margin-bottom: 130px;
-    }
+    margin-bottom: 130px;
   }
 
   &__control {

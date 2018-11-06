@@ -6,6 +6,18 @@
   background: $main-white-color;
   z-index: 3;
 
+  &__column {
+    display: flex;
+    align-items: center;
+    &.column_left {
+      position: relative;
+      padding: 0;
+    }
+    &.column_right {
+      justify-content: flex-end;
+    }
+  }
+
   a {
     @extend %anim-default;
 
@@ -23,12 +35,11 @@
 
   &__logo-link {
     @include size(300px, 76px);
-    position: relative;
     display: block;
 
     &:after {
       position: absolute;
-      left: 34%;
+      right: 0;
       bottom: 1px;
       content: '';
       height: 3px;
@@ -52,11 +63,12 @@
   &__content {
     display: flex;
     align-items: center;
-    margin: 0 auto;
     min-height: 120px;
   }
 
   &__nav {
+    display: flex;
+    justify-content: flex-end;
     margin-left: auto;
   }
 

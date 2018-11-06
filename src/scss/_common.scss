@@ -71,6 +71,7 @@ button {
 .column {
   &_left {
     width: $left_part_width;
+    padding-left: $left_column_offset;
     padding-right: 120px;
   }
 
