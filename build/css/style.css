@@ -480,6 +480,29 @@ button:focus {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
 
+.about {
+  font-family: "Arsenal Bold"; }
+  .about__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 3rem; }
+  .about__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%; }
+  .about__right {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%; }
+  .about__desc {
+    max-width: 200px; }
+
 .order {
   font-size: 18px;
   font-size: 1.8rem;
@@ -546,11 +569,11 @@ button:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%; }
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%; }
   .contact__right {
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%; }
+    -ms-flex-preferred-size: 55%;
+    flex-basis: 55%; }
   .contact__title {
     font-size: 18px;
     font-size: 1.8rem;

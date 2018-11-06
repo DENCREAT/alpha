@@ -3,17 +3,17 @@
   color: $primary-grey-color;
 
   &__wrapper {
-    display: flex;
-    margin-top: to-rem(30px);
-  }
+       display: flex;
+       margin-top: to-rem(30px);
+     }
 
-  &__left{
+  &__left {
     display: flex;
-    flex-basis: 50%;
+    flex-basis: 45%;
   }
 
   &__right {
-    flex-basis: 50%;
+    flex-basis: 55%;
   }
 
   &__title {
