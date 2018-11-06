@@ -1,44 +1,52 @@
 .header {
-  $logoImagePath: '../../images/logo.jpg';
-  $langSwitcherImagePath: '../../ico/';
-
+  @extend %shadow-level-2;
+  position: relative;
   font-family: $font-arsenal-bold;
   width: 100%;
-
   background: $main-white-color;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  z-index: 3;
 
-  &__logo-link {
-    @include size(300px, 76px);
+  a {
+    @extend %anim-default;
 
-    display: block;
-    background: url(#{$logoImagePath}) no-repeat;
+    text-decoration: none;
+    color: $nav-color-static;
 
-    &:after {
-
+    &:hover {
+      color: $nav-color-active;
     }
   }
 
   &__ico {
-    @include size(22px);
+    margin-right: 10px;
+  }
 
-    margin-right: to-rem(10px);
+  &__logo-link {
+    @include size(300px, 76px);
+    position: relative;
+    display: block;
+
+    &:after {
+      position: absolute;
+      left: 34%;
+      bottom: 1px;
+      content: '';
+      height: 3px;
+      background: $main-orange-color;
+      width: 521px;
+      border-bottom: 1px solid $main-orange-color;
+    }
   }
 
   &__contact {
+    @include rem(16px);
     margin-left: auto;
+    color: #7c90a5;
+  }
 
-    &-text {
-      @include rem(16px);
-
-      display: inline-flex;
-      align-items: center;
-
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #7c90a5;
-      cursor: pointer;
-    }
+  &__contact-text {
+    display: flex;
+    align-items: center;
   }
 
   &__content {
@@ -50,46 +58,43 @@
 
   &__nav {
     margin-left: auto;
+  }
 
-    &-items {
-      display: flex;
-      align-items: center;
-      margin: 0;
-      padding: 0;
+  &__nav-items {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 
-      list-style-type: none;
-    }
+  &__nav-item {
+    margin-left: 45px;
+  }
 
-    &-item {
-      margin-left: to-rem(45px);
-    }
+  &-link {
+    @include rem(16px);
 
-    &-link {
-      @extend %anim-default;
-      @include rem(16px);
+    color: $nav-color-static;
+    text-decoration: none;
+    text-transform: uppercase;
 
-      color: $nav-color-static;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &:hover {
-        color: $nav-color-active;
-      }
-    }
-    }
-
-    &__lang-switcher {
-      @include rem(16px);
-      @include size(53px, 20px);
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background-color: $main-orange-color;
-      color: $main-white-color;
-      border-radius: 5px;
-      cursor: pointer;
+    &:hover {
+      color: $nav-color-active;
     }
   }
+
+  &__lang-switcher {
+    @include rem(16px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 18px;
+    background-color: $main-orange-color;
+    color: $main-white-color;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
 

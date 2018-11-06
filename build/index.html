@@ -4,33 +4,38 @@
 	<meta charset="UTF-8">
 	<title>Alpha</title>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body>
+<body class="main">
 <header class="header">
   <div class="container">
     <div class="header__content">
       <div class="header__logo">
-        <a class="header__logo-link" href="#"></a>
+        <a class="header__logo-link" href="./index.html">
+          <img src="images/logo.png" alt="">
+        </a>
       </div>
       <div class="header__contact">
-        <a class="header__contact-text js-header-contact" href="#" class="flex">
-          <i class="ico ico-message--active header__ico"></i>
+        <a href="#" class="header__contact-text js-header-contact t-upper">
+          <i class="ico ico-message ico-message--active header__ico"></i>
           Написать нам
         </a>
       </div>
       <nav class="header__nav">
         <ul class="header__nav-items">
-          <li class="header__nav-item"><a class="header__nav-link" href="#">О нас</a></li>
-          <li class="header__nav-item"><a class="header__nav-link" href="#">Фоторепортажи</a></li>
-          <li class="header__nav-item"><a class="header__nav-link" href="#">Что мы делаем</a></li>
-          <li class="header__nav-item"><a class="header__nav-link" href="#">Контакты</a></li>
-          <li class="header__nav-item">   <span class="header__lang-switcher js-header-language-switcher">EN</span></li>
+          <li class="header__nav-item t-upper"><a class="header__nav-link" href="./about.html">О нас</a></li>
+          <li class="header__nav-item t-upper"><a class="header__nav-link" href="#">Фоторепортажи</a></li>
+          <li class="header__nav-item t-upper"><a class="header__nav-link" href="./projects.html">Что мы делаем</a></li>
+          <li class="header__nav-item t-upper"><a class="header__nav-link" href="./contact.html">Контакты</a></li>
+          <li class="header__nav-item t-upper"><span class="header__lang-switcher js-header-language-switcher">EN</span></li>
         </ul>
       </nav>
     </div>
   </div>
 </header>
+
+<div class="main-section">
+    <div class="main-section__content"></div>
+</div>
 
 <section class="section">
     <div class="container">
@@ -63,6 +68,18 @@
         </div>
     </div>
 </section>
+<section class="section">
+    <div class="container">
+        <div class="text-block">
+            <a href="#"><img class="text-block__img" src="images/content/xerox.png" alt=""></a>
+            <div class="text-block__text">Мы разрабатываем и создаем выставочные стенды, которые помогают участникам выставки эффективно представить свою компанию, продукцию и услуги. Мы стремимся работать с интересными и новыми материалами и конструкциями, а также применяем классические выставочные технологии и выставочные конструкторы (октанорм, максима). В нашем активе также имеется выставочный конструктив для строительства двухэтажных выставочных стендов. Система качества организации производственных процессов подтверждена сертификатами ИСО.
+            </div>
+        </div>
+    </div>
+</section>
+<div class="map" id="map">
+    <img class="map__img gray" src="images/content/map.png" alt="">
+</div>
 
 <footer class="footer">
     <div class="container">

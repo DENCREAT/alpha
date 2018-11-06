@@ -1,7 +1,22 @@
-//= partials/start.html
-//= partials/header.html
+@@include('./partials/start.html', {
+  "index": false
+})
+@@include('./partials/header.html')
 
-//= partials/contact.html
 
-//= partials/footer.html
-//= partials/end.html
+<div class="main-section">
+  <div class="main-section__content">
+    @@include('./partials/contact.html')
+  </div>
+</div>
+
+@@include('./partials/projects.html', {
+  "title": true,
+  "certificate": false,
+  "count": 4
+})
+
+@@include('./partials/client-slider.html')
+
+@@include('./partials/footer.html')
+@@include('./partials/end.html')
