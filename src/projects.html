@@ -1,17 +1,19 @@
 @@include('./partials/start.html', {
- "index": true
+    "index": false
 })
 @@include('./partials/header.html')
 
 <div class="main-section">
-    <div class="main-section__content"></div>
+    <div class="main-section__content">
+@@include('./partials/projects.html', {
+    "title": false,
+    "certificate": true,
+    "count": 8
+})
+    </div>
 </div>
 
 @@include('./partials/client-slider.html')
-@@include('./partials/text-block-for-index.html')
-@@include('./partials/map.html', {
-"gray": true
-})
 
 @@include('./partials/footer.html')
 @@include('./partials/end.html')

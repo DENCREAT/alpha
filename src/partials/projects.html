@@ -1,0 +1,23 @@
+<section class="section">
+    <div class="container">
+        <div class="projects">
+            @@if (title !== false) {
+                <div class="projects__title t-upper">Последние проекты</div>
+            }
+
+            <div class="projects__list">
+                @@for (var i = 0; i < count; i++) {
+                    @@include('./project-item.html')
+                }
+            </div>
+
+
+            @@if (certificate !== false) {
+                <div class="projects__certificate">
+                    <img class="projects__certificate-img" src="images/content/certificate.png" alt="">
+                </div>
+            }
+
+        </div>
+    </div>
+</section>

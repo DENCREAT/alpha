@@ -1,0 +1,36 @@
+.contact {
+  font-family: $font-arsenal-bold;
+  color: #535d67;
+
+  &__top {
+    display: flex;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__subtitle {
+    margin: 10px 0 0 0;
+  }
+
+  &__card-icon {
+    @include size(52px);
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+    @include size(232px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 1px solid #000;
+  }
+}

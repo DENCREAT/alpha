@@ -19,13 +19,11 @@
   font-size: to-rem($value);
 }
 
-@mixin width-calc-stretch($count, $offset, $fallback) {
-  display: inline-block;
+@mixin width-calc-stretch($count, $offset) {
   $count-offset: $count - 1;
-  width: $fallback;
-  width: calc(100% / #{$count} - #{$offset} * #{$count-offset} / #{$count});
   margin-right: $offset;
-  &:last-child { margin-right: 0; }
+  width: calc(100% / #{$count} - #{$offset} * #{$count-offset} / #{$count});
+
   &:nth-child(#{$count}n) { margin-right: 0; }
 }
 

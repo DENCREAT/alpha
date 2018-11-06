@@ -124,7 +124,7 @@ select:focus,
 button:focus {
   outline: none; }
 
-.client-slider__item-img {
+.client-slider__item-img, .header__nav-link {
   -webkit-transition: all .26s ease-in-out;
   transition: all .26s ease-in-out; }
 
@@ -247,29 +247,74 @@ button:focus {
   .client-slider .slick-track {
     height: 100%; }
 
+.contact {
+  font-family: "Arsenal Bold";
+  color: #535d67; }
+  .contact__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .contact__title {
+    margin: 0; }
+  .contact__subtitle {
+    margin: 10px 0 0 0; }
+  .contact__card-icon {
+    width: 52px;
+    height: 52px; }
+  .contact__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .contact__card {
+    width: 232px;
+    height: 232px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #000; }
+
 .header {
   font-family: "Arsenal Bold";
   width: 100%;
   background: #fff;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5); }
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5); }
   .header__logo-link {
     width: 300px;
     height: 76px;
     display: block;
     background: url(../../images/logo.jpg) no-repeat; }
+  .header__ico {
+    width: 22px;
+    height: 22px;
+    margin-right: 1rem; }
   .header__contact {
     margin-left: auto; }
     .header__contact-text {
       font-size: 16px;
       font-size: 1.6rem;
-      margin-left: 10px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       text-transform: uppercase;
+      text-decoration: none;
       color: #7c90a5;
       cursor: pointer; }
-    .header__contact:before {
-      content: url(../../images/ico/message--active.png);
-      display: inline-block; }
   .header__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -292,7 +337,7 @@ button:focus {
       padding: 0;
       list-style-type: none; }
     .header__nav-item {
-      margin-left: 45px; }
+      margin-left: 4.5rem; }
     .header__nav-link {
       font-size: 16px;
       font-size: 1.6rem;

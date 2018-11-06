@@ -1,0 +1,13 @@
+.map {
+  position: relative;
+  height: 400px;
+
+  &__img {
+    @include size(100%);
+    position: absolute;
+
+    &.gray {
+      filter: grayscale(100%);
+    }
+  }
+}

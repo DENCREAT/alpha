@@ -1,4 +1,4 @@
-($(document).ready(function() {
+(function() {
     const $clientSlider = $('.js-client-slider');
     const $clientSliderPrev = $('.js-client-slider-prev');
     const $clientSliderNext = $('.js-client-slider-next');
@@ -13,4 +13,4 @@
         slidesToShow: 7,
         variableWidth: true
     });
-}))();
+})();

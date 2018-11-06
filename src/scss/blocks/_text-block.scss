@@ -1,0 +1,20 @@
+.text-block {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    @extend %anim-default;
+    margin-right: 90px;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  &__text {
+    @include rem(16px);
+    font-family: $font-arsenal-bold;
+    color: #505050;
+  }
+}

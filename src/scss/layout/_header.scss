@@ -1,13 +1,12 @@
 .header {
   $logoImagePath: '../../images/logo.jpg';
-  $contactImagePath: '../../images/ico/message--active.png';
   $langSwitcherImagePath: '../../ico/';
 
   font-family: $font-arsenal-bold;
   width: 100%;
 
   background: $main-white-color;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 
   &__logo-link {
     @include size(300px, 76px);
@@ -20,22 +19,25 @@
     }
   }
 
+  &__ico {
+    @include size(22px);
+
+    margin-right: to-rem(10px);
+  }
+
   &__contact {
     margin-left: auto;
 
     &-text {
       @include rem(16px);
 
-      margin-left: 10px;
+      display: inline-flex;
+      align-items: center;
 
       text-transform: uppercase;
+      text-decoration: none;
       color: #7c90a5;
       cursor: pointer;
-    }
-
-    &:before {
-      content: url(#{$contactImagePath});
-      display: inline-block;
     }
   }
 
@@ -59,10 +61,11 @@
     }
 
     &-item {
-      margin-left: 45px;
+      margin-left: to-rem(45px);
     }
 
     &-link {
+      @extend %anim-default;
       @include rem(16px);
 
       color: $nav-color-static;
