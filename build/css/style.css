@@ -126,7 +126,7 @@ select:focus,
 button:focus {
   outline: none; }
 
-.client-slider__item-img, .projects__item, .projects__img, .projects__item-title, .projects__item-description, .projects__item-square, .text-block__img, .header a {
+.client-slider__item-img, .clients__grid-link, .projects__item, .projects__img, .projects__item-title, .projects__item-description, .projects__item-square, .text-block__img, .header a {
   -webkit-transition: all .26s ease-in-out;
   transition: all .26s ease-in-out; }
 
@@ -149,6 +149,8 @@ button:focus {
 
 .section {
   margin: 25px 0; }
+  .section_clients {
+    margin-top: 0; }
 
 .projects__item, .contact__card, .header {
   -webkit-box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
@@ -305,6 +307,86 @@ button:focus {
   .client-slider .slick-list,
   .client-slider .slick-track {
     height: 100%; }
+
+.clients__header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.clients__header-inner {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 55%;
+  font-family: "Arsenal Bold";
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+.clients__title {
+  font-size: 30px;
+  font-size: 3rem;
+  margin: 0;
+  color: #535d67; }
+
+.clients__subtitle {
+  font-size: 16px;
+  font-size: 1.6rem;
+  max-width: 430px;
+  margin-left: 40px;
+  color: #6a6a6a; }
+
+.clients__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 80px; }
+
+.clients__grid-item {
+  margin-right: 50px;
+  width: calc(100% / 5 - 50px * 4 / 5);
+  max-height: 85px;
+  margin-bottom: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .clients__grid-item:nth-child(5n) {
+    margin-right: 0; }
+
+.clients__grid-link {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: .5; }
+  .clients__grid-link:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1; }
+
+.clients__grid-img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; }
 
 .projects__title {
   font-size: 18px;

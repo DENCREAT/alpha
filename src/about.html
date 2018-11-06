@@ -1,5 +1,5 @@
 @@include('./partials/start.html', {
- "index": false
+ "index": true
 })
 @@include('./partials/header.html')
 
@@ -7,10 +7,13 @@
     <div class="main-section__content"></div>
 </div>
 
+@@include('./partials/clients.html', {
+    "count": 15
+})
 @@include('./partials/projects.html', {
-"title": true,
-"certificate": false,
-"count": 4
+    "title": true,
+    "certificate": false,
+    "count": 4
 })
 
 @@include('./partials/footer.html')
