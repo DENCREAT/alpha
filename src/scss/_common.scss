@@ -54,7 +54,10 @@ button {
 .container {
 	margin: 0 auto;
 	max-width: $size_main_container;
-    margin: 0 auto;
+
+  &--column-view {
+    flex-direction: column;
+  }
 }
 
 .t-upper {

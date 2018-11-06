@@ -1,36 +1,69 @@
 .contact {
   font-family: $font-arsenal-bold;
-  color: #535d67;
+  $primaryColor: #535d67;
+  color: $primaryColor;
 
-  &__top {
+
+  &__wrapper {
     display: flex;
+    margin-top: to-rem(30px);
+  }
+
+  &__left{
+    display: flex;
+    flex-basis: 50%;
+  }
+
+  &__right {
+    flex-basis: 50%;
   }
 
   &__title {
+    @include rem(18px);
+
     margin: 0;
   }
 
   &__subtitle {
+    @include rem(30px);
+
     margin: 10px 0 0 0;
   }
 
   &__card-icon {
     @include size(52px);
+
+    background: $primary_color;
   }
 
   &__cards {
     display: flex;
     justify-content: center;
+    margin-bottom: to-rem(70px);
   }
 
   &__card {
+    @extend %shadow-level-2;
     @include size(232px);
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-right: to-rem(80px);
 
-    border: 1px solid #000;
+    background: #FAFAFA;
+    border-radius: 10px;
+
+    &-info {
+      @include rem(18px);
+
+      a {
+        display: block;
+
+        text-decoration: none;
+        color: $primaryColor;
+      }
+    }
   }
 }
