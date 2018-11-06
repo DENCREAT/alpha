@@ -1,18 +1,29 @@
 .top-main {
+  font-family: $font-arsenal-bold;
+  color: $primary_grey_color;
   &__title {
     @include rem(48px);
     margin-top: 135px;
     margin-bottom: 70px;
-    font-family: $font-arsenal-bold;
+
     line-height: 1.2;
-    color: #444444;
+
+    .about & {
+      @include rem(30px);
+      margin: 70px 0;
+    }
+  }
+
+  &__subtitle {
+    @include rem(24px);
+    margin-bottom: 40px;
   }
 
   &__description {
+    @include rem(16px);
     font-family: $font-arsenal-bold;
-    color: #6a6a6a;
     .main & {
-      margin-bottom: 135px;
+      margin-bottom: 130px;
     }
   }
 

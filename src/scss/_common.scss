@@ -51,6 +51,10 @@ button {
   transition: all .52s ease-in-out;
 }
 
+.c-accent {
+  color: $main-orange-color;
+}
+
 .container {
   position: relative;
   margin: 0 auto;
@@ -67,7 +71,7 @@ button {
 .column {
   &_left {
     width: $left_part_width;
-    padding-right: 100px;
+    padding-right: 120px;
   }
 
   &_right {
