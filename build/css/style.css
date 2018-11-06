@@ -380,6 +380,40 @@ button:focus {
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
 
+.order {
+  font-size: 18px;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 180px;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: #535d67; }
+  .order__plus {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    margin-right: 1rem;
+    background-color: #f09039;
+    border-radius: 5px; }
+    .order__plus:before {
+      font-size: 30px;
+      font-size: 3rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      content: "+";
+      color: #fff; }
+
 .text-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,7 +486,7 @@ button:focus {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-right: 8rem;
+    margin-right: 10rem;
     background: #FAFAFA;
     border-radius: 10px; }
     .contact__card-info {

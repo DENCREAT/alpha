@@ -1,8 +1,6 @@
 .contact {
   font-family: $font-arsenal-bold;
-  $primaryColor: #535d67;
-  color: $primaryColor;
-
+  color: $primary-grey-color;
 
   &__wrapper {
     display: flex;
@@ -50,7 +48,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-right: to-rem(80px);
+    margin-right: to-rem(100px);
 
     background: #FAFAFA;
     border-radius: 10px;
@@ -62,7 +60,7 @@
         display: block;
 
         text-decoration: none;
-        color: $primaryColor;
+        color: $primary_grey_color;
       }
     }
   }
