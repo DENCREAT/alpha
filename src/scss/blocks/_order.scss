@@ -2,32 +2,29 @@
   @include rem(18px);
 
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 180px;
   right: 0;
   transform: rotate(90deg);
-
-  display: inline-flex;
-  align-items: center;
-
+  transform-origin: right bottom;
   text-decoration: none;
   color: $primary_grey_color;
 
   &__plus {
     @include size(32px);
-    position: relative;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: to-rem(10px);
-
+    color: #ffffff;
     background-color: $primary_color;
     border-radius: 5px;
 
     &:before {
       @include rem(30px);
-      @include center-self;
-
       content: "+";
-
-      color: #fff;
     }
   }
 }

@@ -9,7 +9,7 @@
     position: absolute;
     display: flex;
     align-items: flex-start;
-    max-width: 55%;
+    width: $right_part_size;
     font-family: $font-arsenal-bold;
     transform: translateY(-100%);
   }

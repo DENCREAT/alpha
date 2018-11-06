@@ -1,6 +1,7 @@
 .main-section {
   $z_main_section_layer_1: 1;
   $z_main_section_layer_2: 2;
+  $left_outside_area_width: 100% /2 - #{$size_main_container} / 2;
   position: relative;
   min-height: 300px;
 
@@ -10,7 +11,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: calc((100% - #{$size_main_container}) / 2);
+    width: calc(#{$left_outside_area_width});
     background: #d9d9d9;
     z-index: $z_main_section_layer_2;
   }
@@ -21,10 +22,10 @@
     $to: rgba($gradient_color, 1);
     content: '';
     position: absolute;
-    right: 55%;
+    left: 0;
     top: 0;
     height: 100%;
-    width: 100%;
+    width: calc(#{$left_outside_area_width} + #{$size_main_container} * #{$left_part_ratio});
     background: #e4e2e2;
     background-image: linear-gradient(to right, $from 80%, $to 100%);
     z-index: $z_main_section_layer_1;

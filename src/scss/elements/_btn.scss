@@ -1,0 +1,18 @@
+.btn {
+  @include rem(16px);
+  @extend %shadow-level-1, %anim-fast;
+  display: inline-block;
+  padding: 18px 50px;
+  font-family: $font-arsenal-bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  background: darken($main-orange-color, 3%);
+  cursor: pointer;
+
+  &:hover {
+    @extend %shadow-level-2;
+    background: darken($main-orange-color, 0);
+  }
+}

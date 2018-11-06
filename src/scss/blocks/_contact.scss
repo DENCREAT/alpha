@@ -3,17 +3,18 @@
   color: $primary-grey-color;
 
   &__wrapper {
-       display: flex;
-       margin-top: to-rem(30px);
-     }
+    display: flex;
+    margin-top: to-rem(30px);
+    margin-bottom: to-rem(70px);
+  }
 
   &__left {
     display: flex;
-    flex-basis: 45%;
+    flex-basis: $left_part_width;
   }
 
   &__right {
-    flex-basis: 55%;
+    flex-basis: $right_part_width;
   }
 
   &__title {
@@ -40,22 +41,25 @@
 
   &__cards {
     display: flex;
-    justify-content: center;
-    margin-bottom: to-rem(70px);
+    justify-content: flex-end;
+    padding-right: 100px;
   }
 
   &__card {
     @extend %shadow-level-2;
     @include size(232px);
+    min-width: 232px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-right: to-rem(100px);
     background: #fafafa;
     border-radius: 13px;
+  }
 
+  &__card + &__card {
+    margin-left: to-rem(75px);
   }
 
   &__card-info {

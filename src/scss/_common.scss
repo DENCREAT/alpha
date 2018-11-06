@@ -1,92 +1,107 @@
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	font-family: $font-arsenal-regular;
-	font-size: $font-root-size;
+  font-family: $font-arsenal-regular;
+  font-size: $font-root-size;
 }
 
 body {
-	@include rem(16px);
+  @include rem(16px);
 
-    min-width: 320px;
-	padding: 0;
-	margin: 0;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	background: $main_bg;
-	&.main {
-		background: url($bg + 'main-page.png');
-	}
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: $main_bg;
+  &.main {
+    background: url($bg + 'main-page.png');
+  }
 }
 
 html, body {
-	height: 100%;
+  height: 100%;
 }
 
 input,
 select,
 button {
-	&:focus {
-		outline: none;
-	}
+  &:focus {
+    outline: none;
+  }
 }
 
 %anim-fast {
-	transition: all .13s ease-in-out;
+  transition: all .13s ease-in-out;
 }
 
 %anim-default {
-	transition: all .26s ease-in-out;
+  transition: all .26s ease-in-out;
 }
 
 %anim-medium {
-	transition: all .39s ease-in-out;
+  transition: all .39s ease-in-out;
 }
 
 %anim-slow {
-	transition: all .52s ease-in-out;
+  transition: all .52s ease-in-out;
 }
 
 .container {
-	margin: 0 auto;
-	max-width: $size_main_container;
+  position: relative;
+  margin: 0 auto;
+  max-width: $size_main_container;
 
   &--column-view {
     flex-direction: column;
   }
 }
 
+.column-wrapper {
+  display: flex;
+}
+.column {
+  &_left {
+    width: $left_part_width;
+    padding-right: 100px;
+  }
+
+  &_right {
+    width: $right_part_width;
+  }
+}
+
 .t-upper {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .section {
-	margin: 25px 0;
+  margin: 25px 0;
 
-	&_clients {
-		margin-top: 0;
-	}
+  &_clients {
+    margin-top: 0;
+  }
 }
 
 %shadow-level-0 {
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0),
-	0 1px 2px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0),
+  0 1px 2px 0 rgba(0, 0, 0, 0);
 }
 
 %shadow-level-1 {
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05),
-	0 1px 2px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05),
+  0 1px 2px 0 rgba(0, 0, 0, 0.10);
 }
 
 %shadow-level-2 {
-	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.20),
-	0 2px 6px 0 rgba(0, 0, 0, 0.10);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.20),
+  0 2px 6px 0 rgba(0, 0, 0, 0.10);
 }

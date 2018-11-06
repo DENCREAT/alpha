@@ -14,6 +14,7 @@
 
   &__text {
     @include rem(16px);
+    padding-right: 80px;
     font-family: $font-arsenal-bold;
     color: #505050;
   }

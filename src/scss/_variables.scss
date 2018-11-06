@@ -14,3 +14,10 @@ $size_main_container: 1440px;
 $main_bg: #ffffff;
 $primary_color: #f09039;
 $primary_grey_color: #535d67;
+
+$left_part_size: 45;
+$right_part_size: 55;
+$left_part_ratio: $left_part_size / 100;
+$left_part_width: #{$left_part_size + '%'};
+$right_part_ratio: $right_part_size / 100;
+$right_part_width: #{$right_part_size + '%'};
