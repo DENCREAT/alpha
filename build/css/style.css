@@ -194,6 +194,24 @@ button:focus {
     background-image: url("../images/ico/arrow-left.png"); }
     .ico-arrow-left--active {
       background-image: url("../images/ico/arrow-left--active.png"); }
+  .ico-phone {
+    width: 33px;
+    height: 33px;
+    background-image: url("../images/ico/phone.png"); }
+    .ico-phone--active {
+      background-image: url("../images/ico/phone--active.png"); }
+  .ico-map {
+    width: 33px;
+    height: 33px;
+    background-image: url("../images/ico/map.png"); }
+    .ico-map--active {
+      background-image: url("../images/ico/map--active.png"); }
+  .ico-comment {
+    width: 33px;
+    height: 33px;
+    background-image: url("../images/ico/comment.png"); }
+    .ico-comment--active {
+      background-image: url("../images/ico/comment--active.png"); }
   .ico-arrow-right {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg); }
@@ -207,7 +225,7 @@ button:focus {
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(100% / 2 - 1440px / 2);
+    width: calc((100% - 1440px) / 2);
     background: #d9d9d9;
     z-index: 2; }
   .main-section:after {
@@ -218,8 +236,8 @@ button:focus {
     height: 100%;
     width: 100%;
     background: #e4e2e2;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(80%, rgba(184, 195, 207, 0)), to(#bac3cf));
-    background-image: linear-gradient(to right, rgba(184, 195, 207, 0) 80%, #bac3cf 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(80%, rgba(184, 195, 207, 0)), to(#b8c3cf));
+    background-image: linear-gradient(to right, rgba(184, 195, 207, 0) 80%, #b8c3cf 100%);
     z-index: 1; }
   .main-section .main-section__content {
     position: relative;
@@ -460,8 +478,18 @@ button:focus {
     font-size: 3rem;
     margin: 10px 0 0 0; }
   .contact__card-icon {
-    width: 52px;
-    height: 52px;
+    width: 53px;
+    height: 53px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 8px;
     background: #f09039; }
   .contact__cards {
     display: -webkit-box;
@@ -487,15 +515,15 @@ button:focus {
     -ms-flex-align: center;
     align-items: center;
     margin-right: 10rem;
-    background: #FAFAFA;
-    border-radius: 10px; }
-    .contact__card-info {
-      font-size: 18px;
-      font-size: 1.8rem; }
-      .contact__card-info a {
-        display: block;
-        text-decoration: none;
-        color: #535d67; }
+    background: #fafafa;
+    border-radius: 13px; }
+  .contact__card-info {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center; }
+    .contact__card-info a {
+      text-decoration: none;
+      color: inherit; }
 
 .header {
   position: relative;
