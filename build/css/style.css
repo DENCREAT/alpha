@@ -141,11 +141,6 @@ button:focus {
   position: relative;
   margin: 0 auto;
   max-width: 1440px; }
-  .container--column-view {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
 
 .column-wrapper {
   display: -webkit-box;
@@ -159,6 +154,14 @@ button:focus {
 
 .column_right {
   width: 55%; }
+
+.column--height {
+  min-height: 934px; }
+
+.column--push-left {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
 
 .t-upper {
   text-transform: uppercase; }
@@ -177,7 +180,7 @@ button:focus {
   -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.1); }
 
-.projects__item, .contact__card, .btn:hover, .header {
+.projects__item, .about__card, .contact__card, .btn:hover, .header {
   -webkit-box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
 
@@ -568,6 +571,53 @@ button:focus {
     flex-basis: 50%; }
   .about__desc {
     max-width: 200px; }
+  .about__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding-right: 100px;
+    margin-bottom: 12.5rem; }
+  .about__card {
+    width: 230px;
+    height: 234px;
+    min-width: 230px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #f09039;
+    border-radius: 13px; }
+  .about__card + .about__card {
+    margin-left: 7.7rem; }
+  .about__card-info {
+    font-size: 18px;
+    font-size: 1.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff; }
+  .about__card-descr {
+    padding-bottom: 28px; }
+  .about__card-quantity {
+    font-size: 36px;
+    font-size: 3.6rem;
+    padding: 28px 0 28px 0; }
 
 .order {
   font-size: 18px;

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="top-main">
             <div class="column-wrapper">
-                <div class="column column_left">
+                <div class="column column_left column--height">
                     <h1 class="top-main__title t-upper">О нас</h1>
                     <div class="top-main__subtitle">Мы изготавливаем <br>выставочные стенды</div>
                     <div class="top-main__subtitle c-accent">от 5 м2</div>
@@ -13,9 +13,32 @@
                         <button class="btn btn_inverse">Оставить заявку на изготовление</button>
                     </div>
                 </div>
-                <div class="column column_right">
-                    @@include('./top-main-logo.html')
-                </div>
+              <div class="column column_right flex column--push-left">
+                @@include('./top-main-logo.html')
+                <section class="about__cards">
+                  <div class="about__card">
+                    <div class="about__card-info">
+                      Более
+                      <span class="about__card-quantity">15</span>
+                      Лет успешной<br>работы
+                    </div>
+                  </div>
+                  <div class="about__card">
+                    <div class="about__card-info">
+                      Примерно<br>
+                      <span class="about__card-quantity">4570</span>
+                      Выполненных<br>проекта
+                    </div>
+                  </div>
+                  <div class="about__card">
+                    <div class="about__card-info">
+                      Около<br>
+                      <span class="about__card-quantity">150</span>
+                      Специалистов<br>в штате
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
         </div>
     </div>

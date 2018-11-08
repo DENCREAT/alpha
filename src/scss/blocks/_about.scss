@@ -19,4 +19,48 @@
   &__desc {
     max-width: 200px;
   }
+
+  &__cards {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 100px;
+    margin-bottom: to-rem(125px);
+  }
+
+  &__card {
+    @extend %shadow-level-2;
+    @include size(230px, 234px);
+    min-width: 230px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $primary_color;
+    border-radius: 13px;
+  }
+
+  &__card + &__card {
+    margin-left: to-rem(77px);
+  }
+
+  &__card-info {
+    @include rem(18px);
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    color: $main_bg;
+  }
+
+  &__card-descr {
+    padding-bottom: 28px;
+  }
+
+  &__card-quantity {
+    @include rem(36px);
+
+    padding: 28px 0 28px 0;
+  }
 }
