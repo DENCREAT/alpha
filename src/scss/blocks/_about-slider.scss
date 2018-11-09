@@ -1,0 +1,120 @@
+.about-slider {
+  $selector: &;
+  @mixin about-slider-view {
+    text-decoration: underline;
+    color: $main-bg;
+  }
+  @include size(424px, 490px);
+  position: relative;
+  background: transparent;
+
+  &__item {
+    position: relative;
+    display: block;
+    &:hover #{$selector}__item-desc {
+      opacity: 1;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__item-desc {
+    @extend %anim-default;
+    @include size(100%);
+    @include rem(16px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: $main-bg;
+    background: $primary_color;
+  }
+
+  &__item.slick-slide {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 26px;
+  }
+
+  &__item-title {
+    @include rem(18px);
+    @include about-slider-view;
+    font-family: $font-arsenal-bold;
+
+    padding-bottom: 19px;
+    text-transform: capitalize;
+  }
+
+  &__item-link {
+    @include rem(14px);
+    @include about-slider-view;
+
+    position: absolute;
+    bottom: 66px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__item-img {
+    @extend %anim-default;
+
+    display: none;
+
+    .initialized & {
+      display: block;
+    }
+  }
+
+  &__image {
+    &:hover + & {
+      visibility: visible;
+    }
+  }
+
+  &__control {
+    $pos: 15px;
+    @include size(31px);
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: $primary_color;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+
+    &:hover {
+      background: $primary_color;
+    }
+
+    &_prev {
+      left: -64px;
+      top: 0;
+    }
+
+    &_next {
+      right: -64px;
+      top: 0;
+    }
+  }
+
+  &__list,
+  &__item,
+  &__item-img,
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+}
