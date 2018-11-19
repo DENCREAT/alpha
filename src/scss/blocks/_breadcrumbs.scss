@@ -25,8 +25,7 @@
     color: $primary_grey_color;
 
     & + & {
-      margin-left: to-rem(10px);
+      margin-left: to-rem(16px);
     }
   }
-
 }

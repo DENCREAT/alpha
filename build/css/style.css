@@ -809,7 +809,7 @@ button:focus {
     text-decoration: none;
     color: #535d67; }
     .breadcrumbs__link + .breadcrumbs__link {
-      margin-left: 1rem; }
+      margin-left: 1.6rem; }
 
 .text-block {
   display: -webkit-box;
