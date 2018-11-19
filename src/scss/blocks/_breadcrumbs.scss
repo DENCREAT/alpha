@@ -1,10 +1,12 @@
 .breadcrumbs {
+  @include rem(14px);
   $chevronOffset: 5px;
   font: $font-arsenal-bold;
-  @include rem(14px);
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: to-rem(57px);
+  margin-right: to-rem(-25px);
 
   &__chevron {
     @include rem(20px);

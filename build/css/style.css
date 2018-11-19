@@ -756,7 +756,8 @@ button:focus {
   transform-origin: right bottom;
   text-decoration: none;
   color: #535d67; }
-  .order--p-bottom {
+  .order--p-offsets {
+    top: auto;
     bottom: 0; }
   .order__plus {
     width: 32px;
@@ -780,9 +781,9 @@ button:focus {
       content: "+"; }
 
 .breadcrumbs {
-  font: "Arsenal Bold";
   font-size: 14px;
   font-size: 1.4rem;
+  font: "Arsenal Bold";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -791,7 +792,9 @@ button:focus {
   justify-content: flex-end;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 5.7rem;
+  margin-right: -2.5rem; }
   .breadcrumbs__chevron {
     font-size: 20px;
     font-size: 2rem; }

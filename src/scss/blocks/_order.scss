@@ -1,6 +1,7 @@
 .order {
   @include rem(18px);
-  &--p-bottom {
+  &--p-offsets {
+    top: auto;
     bottom: 0;
   }
 
