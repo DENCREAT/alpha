@@ -12,6 +12,6 @@ export const slidersSettings = {
 		arrows: false,
 		fade: true,
 		speed: 200,
-  	cssEase: 'linear'
+  		cssEase: 'linear'
 	}
 };

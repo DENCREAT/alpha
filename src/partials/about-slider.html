@@ -1,5 +1,5 @@
 <section class="section">
-  <div class="container">
+  <div class="container container--p-relative">
     <div class="about-slider">
       <div class="about-slider__control about-slider__control_prev js-about-slider-prev">
         <i class="ico ico-arrow-left"></i>
@@ -43,7 +43,10 @@
 
       <div class="about-slider__control about-slider__control_next js-about-slider-next">
         <i class="ico ico-arrow-right"></i>
-      </div>
+      </div>@@include('./text-block-for-about.html')
     </div>
+    @@include('./order.html', {
+      "p-bottom": "order--p-bottom"
+    })
   </div>
 </section>

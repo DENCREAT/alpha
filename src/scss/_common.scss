@@ -13,6 +13,7 @@ body {
   @include rem(16px);
 
   min-width: 320px;
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
   -webkit-backface-visibility: hidden;

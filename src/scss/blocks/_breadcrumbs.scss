@@ -1,0 +1,32 @@
+.breadcrumbs {
+  $chevronOffset: 5px;
+  font: $font-arsenal-bold;
+  @include rem(14px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__chevron {
+    @include rem(20px);
+  }
+
+  &__chevron-left {
+    padding-right: $chevronOffset;
+  }
+
+  &__chevron-right {
+    padding-left: $chevronOffset;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $primary_grey_color;
+
+    & + & {
+      margin-left: to-rem(10px);
+    }
+  }
+
+}

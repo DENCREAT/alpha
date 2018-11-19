@@ -20,20 +20,29 @@
     const $aboutSlider = $('.js-about-slider');
     const $aboutSliderPrev = $('.js-about-slider-prev');
     const $aboutSliderNext = $('.js-about-slider-next');
+    const isVisibleCls = 'is-visible';
 
-    console.log($aboutSliderLink);
-
-    $aboutSlider.on('init', function(event, slick){
-        slick.$slider.addClass('initialized');
-    });
-
-    $aboutSliderLink.on('click', function(event) {
-        event.preventDefault();
-    });
 
     $aboutSlider.slick({
         prevArrow: $aboutSliderPrev,
         nextArrow: $aboutSliderNext,
         slidesToShow: 1
     });
+
+    $aboutSlider.on('init', function(event, slick){
+        slick.$slider.addClass('initialized');
+    });
+
+    $aboutSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+        if (nextSlide >= 1) {
+            $aboutSliderPrev.addClass(isVisibleCls);
+        } else {
+            $aboutSliderPrev.removeClass(isVisibleCls);
+        }
+    });
+
+    $aboutSliderLink.on('click', function(event) {
+        event.preventDefault();
+    });
+
 })();

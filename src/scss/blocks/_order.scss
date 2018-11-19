@@ -1,5 +1,8 @@
 .order {
   @include rem(18px);
+  &--p-bottom {
+    bottom: 0;
+  }
 
   position: absolute;
   display: flex;
